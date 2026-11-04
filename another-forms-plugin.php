@@ -2,12 +2,20 @@
 /**
  * Plugin Name: Another Forms Plugin (Pro)
  * Description: Sistema de formularios modular.
- * Version: 1.7.6
+ * Version: 1.8.0
  * Author: Zumito
  * Text Domain: another-plugins
+ * Requires at least: 5.8
+ * License: GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Update URI: https://github.com/chilehalal-spa/another-forms-plugin-wp
  */
 
 if (!defined('ABSPATH')) exit;
+
+// Actualizaciones desde las releases de GitHub
+require_once __DIR__ . '/includes/class-chilehalal-github-updater.php';
+Chilehalal_GitHub_Updater_V1::register( __FILE__, 'chilehalal-spa/another-forms-plugin-wp' );
 
 define('AFP_PATH', plugin_dir_path(__FILE__));
 define('AFP_URL', plugin_dir_url(__FILE__));
